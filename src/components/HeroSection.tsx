@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Users, TrendingDown } from "lucide-react"; // Using TrendingDown
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
+  // Smooth scroll helper
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -13,9 +21,9 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Healthcare BPO Team"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-healthcare-navy/90 via-primary/80 to-accent/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-healthcare-navy/70 via-primary/60 to-accent/50"></div>
       </div>
 
       {/* Content */}
@@ -23,7 +31,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/20">
-              🏥 HRCM and Contact Centre Solutions
+              Revenues Care: Advancing Healthcare and Contact Center Efficiency Together.
             </span>
           </div>
 
@@ -39,10 +47,12 @@ const HeroSection = () => {
             delivering long-term, sustainable growth.
           </p>
 
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button
               size="lg"
               className="bg-white text-healthcare-navy hover:bg-white/90 text-lg px-8 py-6 h-auto"
+              onClick={() => scrollToSection("services")}
             >
               Explore Our Services
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -50,6 +60,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-white text-healthcare-navy hover:bg-white/90 text-lg px-8 py-6 h-auto"
+              onClick={() => scrollToSection("contact")}
             >
               Get a Free Consultation
             </Button>
@@ -69,7 +80,10 @@ const HeroSection = () => {
 
             <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
               <div className="p-2 bg-accent rounded-lg">
-                <TrendingUp className="h-6 w-6 text-white" />
+                <TrendingDown
+                  className="h-6 w-6 text-white"
+                  style={{ transform: "rotate(0deg)" }} // Fully flipped
+                />
               </div>
               <div>
                 <div className="text-2xl font-bold text-white">40%</div>
