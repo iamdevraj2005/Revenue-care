@@ -28,10 +28,10 @@ const ChatBox = () => {
 
     emailjs
       .sendForm(
-        "service_nbydr6r", // Service ID
-        "template_sra4ujn", // Template ID
+        "service_6nqm4x6", // ✅ New Service ID
+        "template_vc4fto4", // ✅ New Template ID
         form.current!,
-        "S6WKi-CkRNAQzwO8j" // Public key
+        "lvMl62OCjGcQSO1a0" // ✅ New Public Key
       )
       .then(
         () => {

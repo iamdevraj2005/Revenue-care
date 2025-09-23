@@ -35,8 +35,8 @@ const ContactSection = () => {
 
     try {
       await emailjs.send(
-        "service_nbydr6r",  // ✅ Your EmailJS Service ID
-        "template_sra4ujn", // ✅ Your EmailJS Template ID
+        "service_6nqm4x6",   // ✅ New Service ID
+        "template_vc4fto4", // ✅ New Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -44,7 +44,7 @@ const ContactSection = () => {
           inquiry_type: formData.inquiryType || "Not specified",
           message: formData.message
         },
-        "S6WKi-CkRNAQzwO8j" // ✅ Your EmailJS Public Key
+        "lvMl62OCjGcQSO1a0" // ✅ New Public Key
       );
 
       toast({
