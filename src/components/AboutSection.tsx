@@ -7,7 +7,7 @@ import {
   Target,
   Heart,
   Award,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -42,7 +42,7 @@ const AboutSection = () => {
               { icon: Heart, title: "Clinics", desc: "Medical practices" },
               { icon: Shield, title: "Insurance", desc: "Healthcare insurers" },
               { icon: Target, title: "Startups", desc: "Contact Centre and Healthcare Innovators" },
-              { icon: Users, title: "Intermediaries", desc: "Contact Centre and Revenue Cycle Partners" }
+              { icon: Users, title: "Intermediaries", desc: "Contact Centre and Revenue Cycle Partners" },
             ].map((item, index) => (
               <Card
                 key={index}
@@ -141,7 +141,7 @@ const AboutSection = () => {
                   "Appointment Scheduling",
                   "Claims Processing",
                   "Technical Support",
-                  "Patient Outreach"
+                  "Patient Outreach",
                 ].map((service, index) => (
                   <div
                     key={index}
